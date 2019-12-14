@@ -2,8 +2,7 @@
 
 const checkForSpam = function checkForSpam(string) {
     string = string.toLowerCase();
-    const isStr = string.includes('spam') || string.includes('sale');
-    return isStr;
+    return string.includes ('spam') || string.includes ('sale');
 };
 
 
