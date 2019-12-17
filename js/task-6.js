@@ -5,20 +5,13 @@ const numbers = [];
 let total = 0;
 
 do {
-    input = prompt('Введи число:');
-    if (isNaN(input)) {
-        alert('Неправильный ввод, попробуй еще раз!');
-    } else if (input === null) {
-        break;
-    } else {
-        numbers.push(input);
-        console.log(numbers);
-    }
+    input = prompt("Введите число");
+    numbers.push(Number(input));
 } while (input !== null);
 
-for (const number of numbers) {
-    let num = Number(number);
-    total += num;
+if (numbers.length) {
+    for (let number of numbers) {
+        total += number;
+    }
 }
-
-console.log(`Общая сумма чисел равна: ${total}`);
+console.log(`Общая сумма чисел равна ${total}`);
